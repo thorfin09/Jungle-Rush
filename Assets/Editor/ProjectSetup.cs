@@ -322,7 +322,7 @@ namespace EndlessRunner.Editor
         private static void CreateActiveScene(BiomeData biome, PowerUpConfig mag, PowerUpConfig bst, PowerUpConfig shld, Material pMat, Material cMat)
         {
             // Clear current scene / Create new
-            var scene = EditorSceneManager.NewScene(EditorSceneManager.NewSceneSetup.DefaultGameObjects, EditorSceneManager.NewSceneMode.Single);
+            var scene = EditorSceneManager.NewScene(NewSceneSetup.DefaultGameObjects, NewSceneMode.Single);
             
             // Add Directional Light configurations
             var lightGo = GameObject.Find("Directional Light");
@@ -436,7 +436,7 @@ namespace EndlessRunner.Editor
             canvasGo.AddComponent<CanvasGroup>();
 
             // Setup Event System
-            if (FindObjectOfType<UnityEngine.EventSystems.EventSystem>() == null)
+            if (Object.FindFirstObjectByType<UnityEngine.EventSystems.EventSystem>() == null)
             {
                 GameObject eventSystem = new GameObject("EventSystem");
                 eventSystem.AddComponent<UnityEngine.EventSystems.EventSystem>();
