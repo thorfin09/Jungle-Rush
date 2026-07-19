@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using EndlessRunner.Player;
 using EndlessRunner.Save;
+using EndlessRunner.PowerUps;
 
 namespace EndlessRunner.Core
 {
